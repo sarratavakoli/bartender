@@ -1,0 +1,12 @@
+C:\Users\Sarra\Documents\Code\bartender\Enums\bin\Debug\net6.0\Lists.deps.json
+C:\Users\Sarra\Documents\Code\bartender\Enums\bin\Debug\net6.0\Lists.dll
+C:\Users\Sarra\Documents\Code\bartender\Enums\bin\Debug\net6.0\Lists.pdb
+C:\Users\Sarra\Documents\Code\bartender\Enums\obj\Debug\net6.0\Lists.csproj.AssemblyReference.cache
+C:\Users\Sarra\Documents\Code\bartender\Enums\obj\Debug\net6.0\Lists.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sarra\Documents\Code\bartender\Enums\obj\Debug\net6.0\Lists.AssemblyInfoInputs.cache
+C:\Users\Sarra\Documents\Code\bartender\Enums\obj\Debug\net6.0\Lists.AssemblyInfo.cs
+C:\Users\Sarra\Documents\Code\bartender\Enums\obj\Debug\net6.0\Lists.csproj.CoreCompileInputs.cache
+C:\Users\Sarra\Documents\Code\bartender\Enums\obj\Debug\net6.0\Lists.dll
+C:\Users\Sarra\Documents\Code\bartender\Enums\obj\Debug\net6.0\refint\Lists.dll
+C:\Users\Sarra\Documents\Code\bartender\Enums\obj\Debug\net6.0\Lists.pdb
+C:\Users\Sarra\Documents\Code\bartender\Enums\obj\Debug\net6.0\ref\Lists.dll
