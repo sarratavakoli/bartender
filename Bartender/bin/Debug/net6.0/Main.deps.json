@@ -8,8 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "Main/1.0.0": {
         "dependencies": {
-          "Library": "1.0.0",
-          "Lists": "1.0.0"
+          "Library": "1.0.0"
         },
         "runtime": {
           "Main.dll": {}
@@ -18,11 +17,6 @@
       "Library/1.0.0": {
         "runtime": {
           "Library.dll": {}
-        }
-      },
-      "Lists/1.0.0": {
-        "runtime": {
-          "Lists.dll": {}
         }
       }
     }
@@ -34,11 +28,6 @@
       "sha512": ""
     },
     "Library/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Lists/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

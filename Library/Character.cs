@@ -18,10 +18,16 @@
         public int Drinking; //tied to giving them drinks they like 
         public int Chatting; //tied to making a good argument with them
         public int Flirting; //tied to being charmed
+
+        //the following properties determine the character's drink preferences from DrinkOptions
+        //Drink1 is the favorite drink and Drink2 is the second best choice
+        public DrinkOptions Drink1;
+        public DrinkOptions Drink2;
         
         //constructors
         public Character(string firstName, string lastName, string description, 
-            int determination, int drinking, int chatting, int flirting)
+            int determination, int drinking, int chatting, int flirting, 
+            DrinkOptions drink1, DrinkOptions drink2)
         {
             FirstName = firstName;
             LastName = lastName;
@@ -30,6 +36,8 @@
             Drinking = drinking;
             Chatting = chatting;
             Flirting = flirting;
+            Drink1 = drink1;
+            Drink2 = drink2;
         }
         public Character() { }
 

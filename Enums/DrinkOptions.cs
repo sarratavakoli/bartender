@@ -5,8 +5,7 @@
         Beer,
         Wine, 
         Cider,
-        Whisky,
-        Mead, //witcher
-        Tea //bilbo
+        Mead, 
+        Tea 
     }
 }

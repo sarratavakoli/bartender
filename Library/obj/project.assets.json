@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Sarra\\.nuget\\packages\\": {}
+    "C:\\Users\\sarra\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sarra\\Documents\\Code\\bartender\\Library\\Library.csproj",
+      "projectUniqueName": "C:\\Users\\sarra\\Documents\\Visual Studio 2022\\bartender\\Library\\Library.csproj",
       "projectName": "Library",
-      "projectPath": "C:\\Users\\Sarra\\Documents\\Code\\bartender\\Library\\Library.csproj",
-      "packagesPath": "C:\\Users\\Sarra\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sarra\\Documents\\Code\\bartender\\Library\\obj\\",
+      "projectPath": "C:\\Users\\sarra\\Documents\\Visual Studio 2022\\bartender\\Library\\Library.csproj",
+      "packagesPath": "C:\\Users\\sarra\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\sarra\\Documents\\Visual Studio 2022\\bartender\\Library\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Sarra\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\sarra\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

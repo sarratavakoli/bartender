@@ -10,3 +10,15 @@ C:\Users\Sarra\Documents\Code\bartender\Enums\obj\Debug\net6.0\Lists.dll
 C:\Users\Sarra\Documents\Code\bartender\Enums\obj\Debug\net6.0\refint\Lists.dll
 C:\Users\Sarra\Documents\Code\bartender\Enums\obj\Debug\net6.0\Lists.pdb
 C:\Users\Sarra\Documents\Code\bartender\Enums\obj\Debug\net6.0\ref\Lists.dll
+C:\Users\sarra\Documents\Visual Studio 2022\bartender\Enums\bin\Debug\net6.0\Lists.deps.json
+C:\Users\sarra\Documents\Visual Studio 2022\bartender\Enums\bin\Debug\net6.0\Lists.dll
+C:\Users\sarra\Documents\Visual Studio 2022\bartender\Enums\bin\Debug\net6.0\Lists.pdb
+C:\Users\sarra\Documents\Visual Studio 2022\bartender\Enums\obj\Debug\net6.0\Lists.csproj.AssemblyReference.cache
+C:\Users\sarra\Documents\Visual Studio 2022\bartender\Enums\obj\Debug\net6.0\Lists.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sarra\Documents\Visual Studio 2022\bartender\Enums\obj\Debug\net6.0\Lists.AssemblyInfoInputs.cache
+C:\Users\sarra\Documents\Visual Studio 2022\bartender\Enums\obj\Debug\net6.0\Lists.AssemblyInfo.cs
+C:\Users\sarra\Documents\Visual Studio 2022\bartender\Enums\obj\Debug\net6.0\Lists.csproj.CoreCompileInputs.cache
+C:\Users\sarra\Documents\Visual Studio 2022\bartender\Enums\obj\Debug\net6.0\Lists.dll
+C:\Users\sarra\Documents\Visual Studio 2022\bartender\Enums\obj\Debug\net6.0\refint\Lists.dll
+C:\Users\sarra\Documents\Visual Studio 2022\bartender\Enums\obj\Debug\net6.0\Lists.pdb
+C:\Users\sarra\Documents\Visual Studio 2022\bartender\Enums\obj\Debug\net6.0\ref\Lists.dll

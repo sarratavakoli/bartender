@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Library;
-using Lists;
 
 
 namespace Main
@@ -14,10 +12,27 @@ namespace Main
     {
         static void Main(string[] args)
         {
+            #region color demo
+            //// Demonstrate all colors and backgrounds.
+            //Type type = typeof(ConsoleColor);
+            //Console.ForegroundColor = ConsoleColor.White;
+            //foreach (var name in Enum.GetNames(type))
+            //{
+            //    Console.BackgroundColor = (ConsoleColor)Enum.Parse(type, name);
+            //    Console.WriteLine(name);
+            //}
+            //Console.BackgroundColor = ConsoleColor.Black;
+            //foreach (var name in Enum.GetNames(type))
+            //{
+            //    Console.ForegroundColor = (ConsoleColor)Enum.Parse(type, name);
+            //    Console.WriteLine(name);
+            //}
+            #endregion
+
             #region title
             Console.Title = "Bartender ~ Can you save them?";
 
-            BartenderASCII();
+            Formatting.BartenderASCII();
             Console.WriteLine("Press any key to begin.");
             Console.ReadKey(true);
             #endregion
@@ -31,32 +46,38 @@ namespace Main
             Character bilbo = new Character("Bilbo", "Baggins",
                 "One of a race of creatures about half the size of humans,\n" +
                 "beardless and with hairy feet. He has a pipe at the ready.\n" +
-                "He doesn't really appear to be an adventurer at all.", 10, 7, 10, 1);
+                "He doesn't really appear to be an adventurer at all.", 10, 7, 10, 1,
+                DrinkOptions.Tea, DrinkOptions.Cider);
             Character harry = new Character("Harry", "Potter", 
                 "Infamous among wizarding folk, this young man has a peculiar\n" +
                 "lightning bolt mark on his forehead. He looks like your\n" +
                 "average nerdy student in a school uniform, but he carries\n" +
-                "a wand and an owl appears to be waiting for him outside.", 15, 1, 10, 1);
+                "a wand and an owl appears to be waiting for him outside.", 15, 1, 10, 1,
+                DrinkOptions.Cider, DrinkOptions.Tea);
             Character tyrion = new Character("Tyrion", "Lannister", 
                 "A frequent patron of many drinking establishments, he\n" +
                 "makes up for his lack of height with wit, charm, and alcohol.\n" +
-                "tolerance. Just your kind of guy.\n", 50, 10, 8, 8);
+                "tolerance. Just your kind of guy.\n", 50, 10, 8, 8,
+                DrinkOptions.Wine, DrinkOptions.Beer);
             Character xena = new Character("Xena", ", Warrior Princess",
                 "A powerful warrior in leathers with a chakram and a sword,\n" +
                 "she seeks to fight for the powers of good to make up for\n" +
-                "her dark past. One of your most intimidating patrons.", 60, 1, 3, 3);
+                "her dark past. One of your most intimidating patrons.", 60, 1, 3, 3,
+                DrinkOptions.Mead, DrinkOptions.Beer);
             Character inigo = new Character("Inigo", "Montoya",
                 "A determined young man on a mission to avenge the death\n" +
                 "of his father. He carries adistinguished rapier of the\n" +
                 "17th century style. He is a little over the top, but\n" +
-                "dedicated, you'll give him that.", 70, 1, 1, 4);
+                "dedicated, you'll give him that.", 70, 1, 1, 4,
+                DrinkOptions.Beer, DrinkOptions.Cider);
             Character geralt = new Character("Geralt", "of Rivia",
                 "Known as a 'Witcher', Geralt is a magically enhanced\n" +
                 "monster-hunter. This menacing, grumpy, silent adventurer\n" +
                 "is known for his scraggly white hair, eyes that \n" +
                 "sometimes glow orange with power, and signature grunt\n" +
                 "you may receive in lieu of any other response. He is \n" +
-                "surprisingly kind and a big hit with the ladies.", 40, 8, 10, 8);
+                "surprisingly kind and a big hit with the ladies.", 40, 8, 10, 8,
+                DrinkOptions.Beer, DrinkOptions.Mead);
             
             //list to hold all adventurers
             List<Character> characters = new List<Character>() {bilbo, harry, tyrion, xena, inigo, geralt};
@@ -78,10 +99,11 @@ namespace Main
             #endregion
 
             #region get character name
-            
-            Console.WriteLine("YOU are the tavern's trusty bartender.\n" +
-                "So what is your full name?");
 
+            Console.WriteLine("YOU are the tavern's trusty bartender.\n");
+            Formatting.BrightText();
+            Console.WriteLine("So what is your full name?");
+            Formatting.DarkText();
             ConsoleKey confirmName = ConsoleKey.N;
 
             do
@@ -105,21 +127,27 @@ namespace Main
                     n++;
                 }
 
-                Console.WriteLine($"\n{player.FirstName}{player.LastName}... I see, aren't you an odd one.\n" +
-                    $"Did I get your full name right? (Y/N)");
+                Console.WriteLine($"\n{player.FirstName}{player.LastName}... I see, aren't you an odd one.\n");
+                Formatting.BrightText();
+                Console.WriteLine("Did I get your full name right? (Y/N)");
+                Formatting.DarkText();
 
                 confirmName = Console.ReadKey(true).Key;
                 switch (confirmName)
                 {
                     case ConsoleKey.N:
+                        Formatting.BrightText();
                         Console.WriteLine("\nAlright, let's try that again. What is your full name?");
+                        Formatting.DarkText();
                         break;
                     case ConsoleKey.Y:
                         Console.WriteLine("\nExcellent. Nice to meet you.");
                         break;
                     default:
-                        Console.WriteLine("\nWhat was that? I don't understand. Let's try that again.\n" +
-                            "What is your full name?");
+                        Console.WriteLine("\nWhat was that? I don't understand. Let's try that again.\n");
+                        Formatting.BrightText();
+                        Console.WriteLine("What is your full name?");
+                        Formatting.DarkText();
                         break;
                 }
             } while (confirmName != ConsoleKey.Y);
@@ -148,6 +176,7 @@ namespace Main
                 {
                     //Introduce the current character we are interacting with
                     //present menu options
+                    Formatting.BrightText();
                     Console.WriteLine("\nWhat will you do?");
                     Console.WriteLine("1) Offer them a drink\n" +
                         "2) Ask about their adventure\n" +
@@ -155,6 +184,7 @@ namespace Main
                         "4) Review what you know about them\n" +
                         "5) Check your progress\n" +
                         "6) Exit game\n");
+                    Formatting.DarkText();
 
                     //get user selection as console key
                     ConsoleKey menuSelection = Console.ReadKey(true).Key;
@@ -169,6 +199,11 @@ namespace Main
                             //when done with adventurer, repeatmenu should be set to
                             //false to get a different adventurer
                             //effectiveness determined by characters[characterIndex].Drinking
+
+                            //the following method will prompt the user to choose a drink and calculate the 
+                            //det damage done by that selection
+                            Actions.Drink(characters[characterIndex]);
+
                             Console.WriteLine("Oopsie! This isn't done yet.");
                             int test1 = Actions.Drink(characters[characterIndex]);
                             Console.WriteLine("{0}'s drinking stat is {1}.", characters[characterIndex].FirstName, test1);
@@ -193,7 +228,7 @@ namespace Main
                             //effectiveness determined by characters[characterIndex].Flirting
                             Console.WriteLine("Oopsie! This isn't done yet.");
                             int test3 = Actions.Flirt(characters[characterIndex]);
-                            Console.WriteLine("{0}'s chatting stat is {1}.", characters[characterIndex].FirstName, test3);
+                            Console.WriteLine("{0}'s flirting stat is {1}.", characters[characterIndex].FirstName, test3);
                             break;
                         case ConsoleKey.D4:
                         case ConsoleKey.NumPad4:
@@ -237,38 +272,6 @@ namespace Main
              */
             #endregion
         }
-
-        static void BartenderASCII()
-        {
-            Console.WriteLine(@"
-                           (     )
-                            (   )
-                            (  )
-                           (  )
-                            ) )
-                           ( )                  /\
-                            (_)                 /  \  /\
-                    ________[_]________      /\/    \/  \
-           /\      /\        ______    \    /   /\/\  /\/\
-          /  \    //_\       \    /\    \  /\/\/    \/    \
-   /\    / /\/\  //___\       \__/  \    \/
-  /  \  /\/    \//_____\       \ |[]|     \
- /\/\/\/       //_______\       \|__|      \
-/      \      /XXXXXXXXXX\                  \
-        \    /_I_II  I__I_\__________________\
-                I_I|  I__I_____[]_|_[]_____I
-                I_II  I__I_____[]_|_[]_____I
-                I II__I  I     XXXXXXX     I
-            ~~~~~~'  '~~~~~~~~~~~~~~~~~~~~~~~~
-
--------------------------------------------------------------
-
-            B   A   R   T   E   N   D   E    R 
- 
--------------------------------------------------------------
-            ");
-        }
-
         private static string FlavorText()
         {
             /* this method stores an array of text options that can be selected at random.
@@ -288,6 +291,5 @@ namespace Main
             int indexNbr = rand.Next(flavorTexts.Length);
             return flavorTexts[indexNbr];
         }
-
     }
 }
