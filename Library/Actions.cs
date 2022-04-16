@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 
 namespace Library
 {
@@ -15,6 +16,7 @@ namespace Library
         public static int Drink(Adventurer adventurer)
         {
             #region prompt user to select a drink
+            Formatting.BartenderASCII();
             Console.WriteLine(
                 $"{adventurer.FirstName} does look thirsty. Maybe they would appreciate it if\n" +
                 $"you offered them a drink they would enjoy.\n");
@@ -175,18 +177,22 @@ namespace Library
         public static int Chat(Adventurer adventurer)
         {
             #region prompt user to select a greeting
+            Formatting.BartenderASCII();
             Formatting.BrightText();
             Console.WriteLine("How will you address your patron?");
             #endregion
 
             #region print greeting options from enum GreetingOptions into menu
+
             int count = 1;
             foreach (var greeting in Enum.GetNames(typeof(GreetingOptions)))
-            {
-                Console.Write($"{count}) {greeting} ");
+            {                
+                GreetingOptions menuEnum = (GreetingOptions)Enum.Parse(typeof(GreetingOptions), greeting);
+                Console.Write($"{count}) {GreetingOptionsExtensions.DisplayText(menuEnum)}  ");
                 count++;
             }
             Console.WriteLine("\n");
+
             Formatting.DarkText();
             #endregion
 
@@ -207,7 +213,7 @@ namespace Library
                         if ((GreetingOptions)0 == adventurer.Greeting)
                         {
                             Console.WriteLine("They seem quite pleased by your greeting.");
-                            damage = adventurer.Chatting * 5;
+                            damage = adventurer.Chatting * 3;
                         }
                         else if ((GreetingOptions)0 == adventurer.HatedGreeting)
                         {
@@ -226,7 +232,7 @@ namespace Library
                         if ((GreetingOptions)1 == adventurer.Greeting)
                         {
                             Console.WriteLine("They seem quite pleased by your greeting.");
-                            damage = adventurer.Chatting * 5;
+                            damage = adventurer.Chatting * 3;
                         }
                         else if ((GreetingOptions)1 == adventurer.HatedGreeting)
                         {
@@ -245,7 +251,7 @@ namespace Library
                         if ((GreetingOptions)2 == adventurer.Greeting)
                         {
                             Console.WriteLine("They seem quite pleased by your greeting.");
-                            damage = adventurer.Chatting * 5;
+                            damage = adventurer.Chatting * 3;
                         }
                         else if ((GreetingOptions)2 == adventurer.HatedGreeting)
                         {
@@ -264,7 +270,7 @@ namespace Library
                         if ((GreetingOptions)3 == adventurer.Greeting)
                         {
                             Console.WriteLine("They seem quite pleased by your greeting.");
-                            damage = adventurer.Chatting * 5;
+                            damage = adventurer.Chatting * 3;
                         }
                         else if ((GreetingOptions)3 == adventurer.HatedGreeting)
                         {
@@ -283,7 +289,7 @@ namespace Library
                         if ((GreetingOptions)4 == adventurer.Greeting)
                         {
                             Console.WriteLine("They seem quite pleased by your greeting.");
-                            damage = adventurer.Chatting * 5;
+                            damage = adventurer.Chatting * 3;
                         }
                         else if ((GreetingOptions)4 == adventurer.HatedGreeting)
                         {

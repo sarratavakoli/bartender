@@ -25,6 +25,18 @@
         }
 
         /// <summary>
+        /// This method replaces Console.WriteLine() when we want to take the given string and make
+        /// it print in bright text, then revert back to dark afterwards.
+        /// </summary>
+        /// <param name="text"></param>
+        public static void Bright(string text)
+        {
+            Formatting.BrightText();
+            Console.WriteLine(text);
+            Formatting.DarkText();
+        }
+
+        /// <summary>
         /// Clear the screen, Display game splash page and game title at the top of the screen
         /// </summary>
         public static void BartenderASCII()

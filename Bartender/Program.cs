@@ -48,7 +48,7 @@ namespace Main
                 "tea and puffing on our pipes  to… well, to me being" +
                 "responsible for helping to save the world. I’m really" +
                 "not sure how it all happened, to be honest.", 
-                GreetingOptions.GoodSir, GreetingOptions.Maam);
+                GreetingOptions.Good_Sir, GreetingOptions.My_Lady);
             List<Adventurer> characters = new List<Adventurer>() {bilbo};
             #endregion
 
@@ -70,9 +70,7 @@ namespace Main
             #region get character name
             Formatting.BartenderASCII();
             Console.WriteLine("YOU are the tavern's trusty bartender.\n");
-            Formatting.BrightText();
-            Console.WriteLine("So what is your full name?");
-            Formatting.DarkText();
+            Formatting.Bright("So what is your full name?");
 
             ConsoleKey confirmName;
             do
@@ -97,24 +95,18 @@ namespace Main
 
                 //confirm name
                 Console.WriteLine($"\n{player.FirstName}, huh? ... I see, aren't you an odd one.\n");
-                Formatting.BrightText();
-                Console.WriteLine("Did I get your full name right? (Y/N)");
-                Formatting.DarkText();
+                Formatting.Bright("Did I get your full name right? (Y/N)");
                 confirmName = Console.ReadKey(true).Key;
                 switch (confirmName)
                 {
                     case ConsoleKey.Y:
                         break;
                     case ConsoleKey.N:
-                        Formatting.BrightText();
-                        Console.WriteLine("\nAlright, let's try that again. What is your full name?");
-                        Formatting.DarkText();
+                        Formatting.Bright("\nAlright, let's try that again. What is your full name?");
                         break;
                     default:
                         Console.WriteLine("\nWhat was that? I don't understand. Let's try that again.\n");
-                        Formatting.BrightText();
-                        Console.WriteLine("What is your full name?");
-                        Formatting.DarkText();
+                        Formatting.Bright("What is your full name?");
                         break;
                 }
             } while (confirmName != ConsoleKey.Y);
@@ -143,16 +135,11 @@ namespace Main
                     #region display menu, get selection
                     //display menu
                     Formatting.BartenderASCII();
-                    Formatting.BrightText();
-                    Console.WriteLine("\nWhat will you do?");
-                    Console.WriteLine(
+                    Formatting.Bright("\nWhat will you do?\n" + 
                        $"1) Say hello\n" +
                        $"2) Offer them a drink\n" +
                        $"3) Review your status with {characters[characterIndex]}\n" +
                        $"4) Exit game\n");
-                        //"5) Coming Soon! (Check your progress)\n" +
-                        //"6) Coming Soon! (Charm Them)\n");
-                    Formatting.DarkText();
                     //get input
                     ConsoleKey menuSelection = Console.ReadKey(true).Key;
                     #endregion
@@ -199,17 +186,16 @@ namespace Main
                     //adventurer can be selected to interact with.
                     if (characters[characterIndex].Determination <= 0)
                     {
-                        Console.WriteLine($"\nWow, good job! You convinced {characters[characterIndex].FirstName} not to go get\n" +
+                        Formatting.Bright($"\nWow, good job! You convinced {characters[characterIndex].FirstName} not to go get\n" +
                             $"themselves killed on their stupid impossible mission.\n" +
                             $"This world needs more bartenders like you!");
                         repeatMenu = false;
-                        Console.WriteLine(
-                            $"\nFor now, your journey ends here. Soon, you will meet many\n" +
-                            $"other adventurers that are in dire need of your wise words\n" +
-                            $"and stiff drinks!");
                         exit = true;
                     }
-                    Console.ReadKey(true);
+                    else 
+                    {
+                        Console.ReadKey(true);
+                    }
                 } while (repeatMenu); //menu loop continues while repeatMenu = true;
                 #endregion
 
@@ -218,6 +204,11 @@ namespace Main
             } while (!exit); //main game loop continues while exit = false
             #endregion
 
+            Formatting.Bright(
+                $"\nFor now, your journey ends here. Soon, you will meet many\n" +
+                $"other adventurers that are in dire need of your wise words\n" +
+                $"and stiff drinks!");
+            Console.WriteLine($"\nYou saved {characterIndex - 1} {((characterIndex - 1) > 1 ? "adventurers" : "adventurer")} from their almost definite doom.\n\n");
         }
         private static string FlavorText()
         {
