@@ -182,8 +182,7 @@ namespace Library
             Console.WriteLine("How will you address your patron?");
             #endregion
 
-            #region print greeting options from enum GreetingOptions into menu
-
+            #region print greeting options from enum GreetingOptions into menu            
             int count = 1;
             foreach (var greeting in Enum.GetNames(typeof(GreetingOptions)))
             {                
@@ -191,8 +190,8 @@ namespace Library
                 Console.Write($"{count}) {GreetingOptionsExtensions.DisplayText(menuEnum)}  ");
                 count++;
             }
-            Console.WriteLine("\n");
 
+            Console.WriteLine("\n");
             Formatting.DarkText();
             #endregion
 
@@ -331,8 +330,8 @@ namespace Library
                 
         /// <summary>
         /// Given an adventurer object, detStatus calculates their current percentage of 
-        /// determination and returns a corresponding string value to hint at this value to 
-        /// the player without providing the data directly on-screen.
+        /// determination. detStatus then displays a message to the user providing a vague indication of 
+        /// how much determination they currently have left.
         /// </summary>
         /// <param name="adventurer"></param>
         /// <returns></returns>
@@ -356,6 +355,44 @@ namespace Library
                 status = "They seem to be full of doubt.";
             }
             return status;
+        }
+
+        /// <summary>
+        /// Plays the Final Fantasy victory theme.
+        /// </summary>
+        public static void PlaySong()
+        {
+            Console.Beep(987, 153);
+            Console.Beep(987, 153);
+            Console.Beep(987, 153);
+            Console.Beep(987, 900);
+            Console.Beep(784, 900);
+            Console.Beep(880, 900);
+            Console.Beep(987, 700);
+            Console.Beep(880, 300);
+            Console.Beep(987, 700);
+            Thread.Sleep(500);
+        }
+        
+        /// <summary>
+        /// Stores an array of text options that can be selected at random. 
+        /// Can be used to provide variety within repeated dialogue responses.
+        /// </summary>
+        /// <returns></returns>
+        public static string FlavorText()
+        {
+            string[] flavorTexts =
+            {
+                "text1",
+                "text2",
+                "text3",
+                "text4",
+                "text5",
+                "text6"
+            };
+            Random rand = new Random();
+            int indexNbr = rand.Next(flavorTexts.Length);
+            return flavorTexts[indexNbr];
         }
 
     }

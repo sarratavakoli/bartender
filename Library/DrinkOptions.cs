@@ -2,10 +2,10 @@
 {
     public enum DrinkOptions
     {
-        beer,
-        wine, 
-        cider,
-        mead, 
-        tea 
+        Beer,
+        Wine, 
+        Cider,
+        Mead, 
+        Tea 
     }
 }

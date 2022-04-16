@@ -11,38 +11,21 @@ namespace Main
 {
     internal class Program
     {
-        static void PlaySong()
-        {
-            Console.Beep(987, 153);  
-            Console.Beep(987, 153);  
-            Console.Beep(987, 153);  
-            Console.Beep(987, 900);
-            Console.Beep(784, 900);
-            Console.Beep(880, 900);
-            Console.Beep(987, 700);
-            Console.Beep(880, 300);
-            Console.Beep(987, 700);
-            Thread.Sleep(500); 
-        }
         static void Main(string[] args)
         {
-            Console.SetWindowSize(61, 40);
-
-            #region title and character initialization
             Console.Title = "Bartender ~ Can you save them?";
 
-            Formatting.BartenderASCII();
-            Console.WriteLine("Press any key to begin.");
-            Console.ReadKey(true);
-            #endregion
+            Console.SetWindowSize(61, 40);
 
             #region characters initialized
+            //for now, we are only working with one adventurer and he is added to the list
+            //to be accessed throughout the system.  ahhh
             Adventurer player = new Adventurer();
             Adventurer bilbo = new Adventurer("Bilbo", "Baggins",
                 "One of a race of creatures about half the size of humans,\n" +
                 "beardless and with hairy feet. He has a pipe at the ready.\n" +
                 "He doesn't really appear to be an adventurer at all.", 100, 7, 10, 1,
-                DrinkOptions.tea, DrinkOptions.cider,
+                DrinkOptions.Tea, DrinkOptions.Cider,
                 "Well you see, this very tall and pushy wizard showedup to" +
                 "my home and somehow we went from a very nice, cozy cup of" +
                 "tea and puffing on our pipes  to… well, to me being" +
@@ -52,7 +35,10 @@ namespace Main
             List<Adventurer> characters = new List<Adventurer>() {bilbo};
             #endregion
 
-            #region intro
+            #region introduction
+            Formatting.BartenderASCII();
+            Console.WriteLine("Press any key to begin.");
+            Console.ReadKey(true);
             Console.WriteLine(
                 "\nOnce upon a time there was a magical kingdom. A Queen ruled\n" +
                 "over the lands, but dark forces threatened the safety of her\n" +
@@ -112,17 +98,17 @@ namespace Main
             } while (confirmName != ConsoleKey.Y);
             #endregion
 
-            #region introduction to main menu loop
+            #region introduction to main menu
             Formatting.BartenderASCII();
             Console.WriteLine($"\nExcellent. Nice to meet you bartender {player.FirstName}. I know");
             Console.WriteLine("You just got here but it's time to get to work.");
             #endregion
 
             #region main game loop 
-            //initialize index before loop and increment after so that breaking out of the loop and
-            //re-entering it will grant you an encounter with the next adventurer in the character list
             int characterIndex = 0;
             bool exit = false;
+            //initialize index before loop and increment after so that breaking out of the loop and
+            //re-entering it will grant you an encounter with the next adventurer in the character list
             do 
             {
                 Console.WriteLine("Someone is waiting for you.\n");
@@ -204,30 +190,15 @@ namespace Main
             } while (!exit); //main game loop continues while exit = false
             #endregion
 
+            #region display goodbye message and adventurers saved
+            Actions.PlaySong();
             Formatting.Bright(
                 $"\nFor now, your journey ends here. Soon, you will meet many\n" +
                 $"other adventurers that are in dire need of your wise words\n" +
                 $"and stiff drinks!");
             Console.WriteLine($"\nYou saved {characterIndex - 1} {((characterIndex - 1) > 1 ? "adventurers" : "adventurer")} from their almost definite doom.\n\n");
-        }
-        private static string FlavorText()
-        {
-            /* this method stores an array of text options that can be selected at random.
-             * will use this format to create similar methods as needed, housing 
-             * different type of flavor text.
-             */
-            string[] flavorTexts =
-            {
-                "text1",
-                "text2",
-                "text3",
-                "text4",
-                "text5",
-                "text6"
-            };
-            Random rand = new Random();
-            int indexNbr = rand.Next(flavorTexts.Length);
-            return flavorTexts[indexNbr];
-        }
+            #endregion
+
+        }        
     }
 }

@@ -2,42 +2,30 @@
 {
     public class Adventurer
     {
-        //fields
+        //FIELDS
+        /// <summary>
+        /// Upon construction, determination value is also assigned as MaxDetermination and remains
+        /// a read-only class. Throughout the program, determination will be reduced or increased
+        /// by player actions (similar to enemy health points in a typical enemy encounter) while
+        /// MaxDetermination will remain the original value and enable percentage hp type calculations.
+        /// </summary>
         private readonly int _maxDetermination;
-        //determined by determination on construction to avoid entering 
-        //both determination & max determination
-        
 
-
-
-        //properties
+        //PROPERTIES
         public string FirstName;
         public string LastName;
         public string Description;
-
-        //determination points must be depleted to discourage
-        //essentially this is HP
-        public int Determination;
-
-        //the following stats determine susceptibility to player efforts
-        //currently scaled from 1-10 where 10 indicates high susceptibility
-        public int Drinking; //tied to giving them drinks they like 
-        public int Chatting; //tied to making a good argument with them
-        public int Flirting; //tied to being charmed
-
-        //Drink1 is their favorite drink and Drink2 is their second favorite
-        public DrinkOptions Drink1;
-        public DrinkOptions Drink2;
-
-        //static chat responses
+        public int Determination; //essentially represents current health points
+        public int Drinking; //susceptibility to effective drink choices
+        public int Chatting; //susceptibility to effective chat choices
+        public int Flirting; //susceptibility to effective flirting choices
+        public DrinkOptions Drink1; //favorite drink choice
+        public DrinkOptions Drink2; //second favorite drink choice
+        
         public string AdChat1; //adventurer's first dialogue blurb after being greeted
 
-        //greeting preferences
-        public GreetingOptions Greeting;
-        public GreetingOptions HatedGreeting;
-        //the above has negative damage effect aka strengthens determination
-        //
-        //determined by determination on construction
+        public GreetingOptions Greeting; //favorite greeting choice
+        public GreetingOptions HatedGreeting; //hated greeting choice increases determination
         public int MaxDetermination { get { return _maxDetermination; } }
         
 

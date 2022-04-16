@@ -2,11 +2,13 @@
 {
     public class Formatting
     {
+        #region some formatting notes for later
         //Console.SetWindowSize(w, h) to make the window a static size and then
         //Console.SetCursorPosition(x, y) to set where the next console writeline starts
         //and some for loops along with string.ToString.Split to turn strings into arrays
         //and then for loops to move the Y coordinate down for each line
         //split on '\n' to make an array out of my ToString method for displaying stuff
+        #endregion
 
         /// <summary>
         /// Change text to a standard dark color
@@ -25,7 +27,7 @@
         }
 
         /// <summary>
-        /// This method replaces Console.WriteLine() when we want to take the given string and make
+        /// Replace Console.WriteLine() when we want to take the given string and make
         /// it print in bright text, then revert back to dark afterwards.
         /// </summary>
         /// <param name="text"></param>
@@ -37,7 +39,7 @@
         }
 
         /// <summary>
-        /// Clear the screen, Display game splash page and game title at the top of the screen
+        /// Clear the screen, display game splash image and game title.
         /// </summary>
         public static void BartenderASCII()
         {
@@ -78,7 +80,7 @@
         }
 
         /// <summary>
-        /// Just a method used as needed to select colors I may want to use to change the program.
+        /// For testing purposes, this method displays all colored text formatting options.
         /// </summary>
         public static void ColorTest()
         {
