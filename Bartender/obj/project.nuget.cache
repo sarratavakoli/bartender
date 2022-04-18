@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "hM6ztLI9qNA5M5d8T13lYRLGgt6W1VPVBHaNbViRkVQLP2EgOaSKoUwgbXPkbGqflNnKf9K5nj+4pz1E/nniQA==",
+  "dgSpecHash": "3bpWEA4ZTJ3NJkA2eR2cOkyFO48oV7/D8Cd+9DEY/TdpO5J7OFlM9hRiuQtMsZbQJxhtsL/Cy57ItGGZBY2eRw==",
   "success": true,
   "projectFilePath": "C:\\Users\\sarra\\Documents\\Visual Studio 2022\\bartender\\Bartender\\Main.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\sarra\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\sarra\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
+    "C:\\Users\\sarra\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -22,3 +22,4 @@ C:\Users\sarra\Documents\Visual Studio 2022\bartender\Library\obj\Debug\net6.0\L
 C:\Users\sarra\Documents\Visual Studio 2022\bartender\Library\obj\Debug\net6.0\refint\Library.dll
 C:\Users\sarra\Documents\Visual Studio 2022\bartender\Library\obj\Debug\net6.0\Library.pdb
 C:\Users\sarra\Documents\Visual Studio 2022\bartender\Library\obj\Debug\net6.0\ref\Library.dll
+C:\Users\sarra\Documents\Visual Studio 2022\bartender\Library\bin\Debug\net6.0\The_Bards_Tale.wav

@@ -1,4 +1,6 @@
-﻿namespace Library
+﻿using System.Media;
+
+namespace Library
 {
     public class Formatting
     {
@@ -8,7 +10,33 @@
         //and some for loops along with string.ToString.Split to turn strings into arrays
         //and then for loops to move the Y coordinate down for each line
         //split on '\n' to make an array out of my ToString method for displaying stuff
-        #endregion
+        /*
+        public static void typewriter(string s)
+        {
+            // This method types strings out slowly.
+            for (int i = 0; i < s.Length; i++)
+            {
+                Console.Write(s[i]);
+
+                Thread.Sleep(50);
+            }
+        }
+        */
+        #endregion        
+        
+        /// <summary>
+        /// Replaces Console.Write to print text with a delay, creating a typewriter effect.
+        /// </summary>
+        /// <param name="message"></param>
+        public static void Typewrite(string message)
+        {
+            for (int i = 0; i < message.Length; i++)
+            {
+                Console.Write(message[i] );
+                Thread.Sleep(25);
+            }
+
+        }
 
         /// <summary>
         /// Change text to a standard dark color

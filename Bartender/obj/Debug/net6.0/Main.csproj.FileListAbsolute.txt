@@ -51,3 +51,11 @@ C:\Users\sarra\Documents\Visual Studio 2022\bartender\Bartender\obj\Debug\net6.0
 C:\Users\sarra\Documents\Visual Studio 2022\bartender\Bartender\obj\Debug\net6.0\Main.pdb
 C:\Users\sarra\Documents\Visual Studio 2022\bartender\Bartender\obj\Debug\net6.0\Main.genruntimeconfig.cache
 C:\Users\sarra\Documents\Visual Studio 2022\bartender\Bartender\obj\Debug\net6.0\ref\Main.dll
+C:\Users\sarra\Documents\Visual Studio 2022\bartender\Bartender\bin\Debug\net6.0\The_Bards_Tale.wav
+C:\Users\sarra\Documents\Visual Studio 2022\bartender\Bartender\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\sarra\Documents\Visual Studio 2022\bartender\Bartender\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\sarra\Documents\Visual Studio 2022\bartender\Bartender\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\sarra\Documents\Visual Studio 2022\bartender\Bartender\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\sarra\Documents\Visual Studio 2022\bartender\Bartender\bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\sarra\Documents\Visual Studio 2022\bartender\Bartender\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\sarra\Documents\Visual Studio 2022\bartender\Bartender\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll

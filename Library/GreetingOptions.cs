@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace Library
 {
+    /// <summary>
+    /// Enum of greeting options used by Actions.Greet to generate dynamic menu and greeting
+    /// selection from user. Adventurer favored/hated greeting preferences stored in Adventurer.Greeting
+    /// and Adventurer.HatedGreeting.
+    /// </summary>
     public enum GreetingOptions
     {
         Hey_You,        
